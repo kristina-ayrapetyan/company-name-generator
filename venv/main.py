@@ -2,10 +2,10 @@ from flask import Flask
 from flask import render_template
 from flask import request
 import requests
-import validators
 import cgi
 from bs4 import BeautifulSoup as bs
 import lxml
+import re
 
 '''
 Firstly I inspected several websites to see where company names are mostly located and as a result decided to seek them inside the <title> tag.
@@ -26,8 +26,15 @@ def company_name():
     s_url = request.form.get('s_url')
     page = requests.get(s_url)
     soup = bs(page.content, 'html.parser')
+    
+    emails = re.findall(r'[\w\.-]+@[\w\.-]+', page.content.decode('utf-8'))
+    numbers = re.findall(r'\+[-()\s\d]+?(?=\s*[+<])', page.content.decode('utf-8'))
+    s = ', '
+    email_html = "Email: " + s.join(emails)
+    number_html = "Phone: " + s.join(numbers)
+    
     title = soup.title.text
-    return render_template('company.html', title = title)
+    return render_template('company.html', title = title, email_html = email_html, number_html = number_html)
 
 if __name__ == '__main__':
     app.run(debug=True)
