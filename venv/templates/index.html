@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Company name generator</title>
+  <style>
+    body {
+     width: 100vw;
+     height: 100vh;
+     display: flex;
+     align-items: center;
+    }
+    div {
+      width: 50%;
+      margin: auto;
+      border-left: medium solid red;
+      padding: 5% 5%;
+      background-color: #fff2e5;
+    }
+  </style>
+</head>
+
+<body>
+<div>
+  <h1 style="color: red">Company name generator</h1>
+  <p>Fill in this form with your URL</p>
+  <form method="POST" action="/company">
+    <input type="text" pattern="https?://.+" name="s_url" required>
+    <button type="submit" id='script' name="submit">Search</button>
+  </form>
+</div>
+</body>
+
+</html>
