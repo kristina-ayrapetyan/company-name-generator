@@ -1,6 +1,4 @@
 alabaster==0.7.12
-anaconda-navigator==2.0.1
-anaconda-project==0.8.3
 applaunchservices==0.2.1
 appnope==0.1.0
 appscript @ file:///opt/concourse/worker/volumes/live/aa928f42-721f-468a-5637-76f7349085f8/volume/appscript_1594840167539/work
@@ -35,13 +33,6 @@ click==7.1.2
 cloudpickle @ file:///tmp/build/80754af9/cloudpickle_1598884132938/work
 clyent==1.2.2
 colorama @ file:///tmp/build/80754af9/colorama_1603211150991/work
-conda==4.10.1
-conda-build==3.21.4
-conda-content-trust @ file:///tmp/build/80754af9/conda-content-trust_1617045594566/work
-conda-package-handling @ file:///opt/concourse/worker/volumes/live/d106838d-eaa7-40fd-5437-9d95a7db5458/volume/conda-package-handling_1618262135990/work
-conda-repo-cli @ file:///tmp/build/80754af9/conda-repo-cli_1620168426516/work
-conda-token @ file:///tmp/build/80754af9/conda-token_1620076980546/work
-conda-verify==3.4.2
 contextlib2==0.6.0.post1
 cryptography @ file:///opt/concourse/worker/volumes/live/449c9d42-da39-4138-6bf0-843317a1ad24/volume/cryptography_1601046862310/work
 cycler==0.10.0
